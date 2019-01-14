@@ -1,0 +1,13 @@
+version: 2.1
+
+orbs:
+  plantuml: orbss/plantuml@0.2.1
+
+workflows:
+  version: 2
+  generator:
+    jobs:
+      - plantuml/generate-svg:
+          extension: ".uml"
+      - plantuml/generate-svg:
+          extension: ".txt"
